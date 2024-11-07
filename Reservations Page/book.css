@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(./font/Lato/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: 'Rufina';
+    src: url(./font/Lato/Rufina/Rufina-Bold.ttf);
+}
+
+/*BODY*/
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+
+.backGround{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/frames-for-your-heart-cpD5BMEmgLk-unsplash.jpg);
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/*NAVBAR*/
+.navBar{
+    margin: 0 1%;
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+}
+.navBar:hover{
+    box-shadow: 0 0px 15px 0px rgb(121, 119, 119);
+}
+
+.logo{
+    padding-top: 30px;
+    width: 50%;
+}
+.logo a{
+    color: rgb(250, 250, 206);
+    text-decoration: overline;
+    font-size: 30px;
+    font-family: 'Rufina';
+    padding-left: 20%;
+}
+.logo a:hover{
+    color: rgb(65, 175, 133);
+    transition: .3s;
+}
+
+.menu{
+    width: 50%;
+    padding: 2.5%;
+}
+
+.menu a{
+    text-decoration: 3px overline brown;
+    font-size: 18px;
+    margin: 30px;
+    color: white;
+    font-family: 'Lato';
+}
+.menu a:hover{
+    transition: .3s;
+    color: rgb(65, 175, 133);
+    text-decoration: 3px overline rgb(65, 175, 133);
+}
+
+
+
+/*HERO PAGE*/
+.hero{
+    position: relative;
+    top: 8rem;
+    display: flex;
+    height: 55vh;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+
+.heading h1{
+    font-size: 50px;
+    padding: 1%;
+    font-family: 'Lato';
+    color: rgb(250, 250, 206);
+    text-align: center;
+}
+
+.homeNote{
+    width: 50%;
+    height: 40vh;
+    display: flex;
+    align-items: flex-end;
+}
+.homeNote p{
+    margin-left: 5%;
+    font-size: 43px;
+    color: rgb(250, 250, 206);
+    font-family: 'Rufina';
+    opacity: calc(0.6);
+}
+
+
+
+
+/*AVAILABILITY*/
+.availabilityContainer{
+    height: 30vh;
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    margin-top: 20px;
+}
+
+.availability{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Lato';
+    box-shadow: 0 0 5px 0 silver;
+}
+
+.date{
+    width: 30%;
+    height: 40%;
+    display: flex;
+    border-radius: 5px;
+    border: 2px solid silver;
+}
+.date input{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    border-right: 1px solid silver;
+}
+.date input:hover{
+    background-color: rgb(241, 241, 241);
+    border: 2px solid silver;
+    transform: scale(1.08);
+}
+.date input::before{
+    content: attr(placeholder);
+}
+
+.age{
+    width: 30%;
+    height: 45%;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 2px solid silver;
+    border-radius: 5px;
+}
+.age div{
+    width: 50%;
+}
+
+.adult-kids{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid silver;
+}
+.adult-kids button{
+    padding: 2px 4px;
+    width: 25px;
+    background-color: white;
+    color: brown;
+    border: 1px solid grey;
+}
+.adult-kids button:hover{
+    color: white;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.btn{
+    width: 15%;
+    height: 45%;
+}
+
+.btn button{
+    height: 100%;
+    border: 1px solid brown;
+    border-radius: 5px;
+    color: brown;
+    text-decoration: none;
+    padding: 10px 20%;
+    position: relative;
+}
+.btn button:hover{
+    color: white;
+    background-color: brown;
+    cursor: pointer;
+}
+
+
+
+/*ROOMS!!!*/
+.rooms{
+    height: 245vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#availableInfo{
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: rgb(65, 175, 133);
+}
+
+.roomsContainer{
+    width: 85%;
+    height: 225vh;
+}
+.roomsRows{
+    height: 40vh;
+    width: 90%;
+    display: flex;
+    margin-bottom: 5vh;
+    border-radius: 10px;
+    box-shadow: 1px 0px 5px black;
+}
+
+.roomsDescription{
+    height: 40vh;
+    width: 75%;
+    margin: 0 0 5vh 0;
+    display: flex;
+}
+
+.roomsImage{
+    width: 50%;
+    height: 100%;
+}
+.roomsImage img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.imageText{
+    width: 50%;
+    padding: 3% 3%;
+}
+.textNote h3{
+    font-size: 30px;
+    font-family: 'Rufina';
+    margin-bottom: 10%;
+    color: brown;
+}
+.textNote p{
+    margin-bottom: 10%;
+}
+.textIcons i{
+    margin-right: 2%;
+}
+
+.Prices{
+    width: 25%;
+    height: 40vh;
+    border-left: 1px dashed silver;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 20px;
+}
+.price{
+    color: brown;
+    margin-bottom: 7%;
+    font-size: 25px;
+}
+.roomsPrice{
+    position: absolute;
+    text-align: center;
+}
+.priceText{
+    color: silver;
+    margin-bottom: 7%;
+}
+.roomsPrice button{
+    padding: 12px 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    background-color: rgb(65, 175, 133);
+    border: 1px solid black;
+    color: rgb(255, 243, 212);
+}
+.roomsPrice button:hover{
+    transform: scale(1.05);
+    background-color: rgb(77, 180, 77);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/*JAVASCRIPT*/
+.booked{
+    position: absolute;
+    width: 15%;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: 5s;
+}
+.booked i{
+    font-size: 70px;
+    color: green;
+}
+.bookedInfo{
+    color: green;
+    font-size: 23px;
+    margin-bottom: 5%;
+    font-family: 'Rufina';
+}
+.bookedText{
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+}
+
+.unavailable{
+    display: none;
+}
+
+
+
+/*FOOTER*/
+.footer{
+    height: 15vh;
+    color: rgb(161, 161, 161);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.footerText a{
+    color: red;
+    font-family: 'Rufina';   
+}
+.footer a:hover{
+    color: blueviolet;
+}
+
+.footerIcons{
+    color: black;
+}
+.footerIcons i{
+    margin: 5px;
+}

@@ -1,0 +1,69 @@
+
+(function () {
+    var scr = document.createElement('script');
+    var snippet = "var i = document.createElement('img');\
+    i.setAttribute('alt', '');\
+    i.setAttribute('height', '1');\
+    i.setAttribute('width', '1');\
+    i.setAttribute('style', 'display: none;');\
+    i.setAttribute('src', 'https://ad.doubleclick.net/ddm/activity/src=4810757;type=sales;cat=marri0hs;qty=1;cost=0;u1=MGP_201904|/default|https://www.marriott.com/;u16=;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=UNKNOWN');\
+    document.body.appendChild(i);\
+    ";
+
+    scr.type = 'text/javascript';
+    scr.async = true;
+    if (scr.textContent) {
+        scr.textContent = snippet;
+    } else {
+        scr.text = snippet;
+    }
+    document.getElementsByTagName('head')[0].appendChild(scr);
+})();
+(function () {
+var wh = document.createElement('script'); wh.type = 'text/javascript'; wh.async = true;
+wh.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'p.relay-t.io/wh.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wh, s);
+})();
+(function () {var t=document.createElement('img');t.async=!0,t.width=1,t.height=1,t.style.display='none',t.src='https://ib.adnxs.com/px?id=1228256&t=1';document.body.appendChild(t)})();
+        (function () {var t=document.createElement('img');t.async=!0,t.width=1,t.height=1,t.style.display='none',t.src='https://ib.adnxs.com/seg?add=21126164&t=1';document.body.appendChild(t)})();
+
+(function () {
+    var scr = document.createElement('script');
+    var snippet = "var i = document.createElement('img');\
+i.setAttribute('alt', '');\
+i.setAttribute('height', '1');\
+i.setAttribute('width', '1');\
+i.setAttribute('style', 'display: none;');\
+i.setAttribute('src', 'https://cm.g.doubleclick.net/pixel?google_cm=true&google_hm=NTM1MTFjZGYtMWFjZS04MWJhLTBkOTctMzNiNzhmN2M1ZmQ1&google_nid=sojern__adx_open_bidder_seat&google_sc=true&sjrn_id=NbP9Q1Fo01SlEyR6F7le_mEH9MLBKzt4ci4vlq9vHSWbJ_Opy85cHOwf_CB6bxF0&sjrn_pid=211805');\
+document.body.appendChild(i);\
+";
+
+    scr.type = 'text/javascript';
+    scr.async = true;
+    if (scr.textContent) {
+        scr.textContent = snippet;
+    } else {
+        scr.text = snippet;
+    }
+    document.getElementsByTagName('head')[0].appendChild(scr);
+})();
+(function () {
+    var scr = document.createElement('script');
+    var snippet = "var i = document.createElement('img');\
+i.setAttribute('alt', '');\
+i.setAttribute('height', '1');\
+i.setAttribute('width', '1');\
+i.setAttribute('style', 'display: none;');\
+i.setAttribute('src', 'https://cm.g.doubleclick.net/pixel?google_hm=NTM1MTFjZGYtMWFjZS04MWJhLTBkOTctMzNiNzhmN2M1ZmQ1&google_nid=sojern_adh');\
+document.body.appendChild(i);\
+";
+
+    scr.type = 'text/javascript';
+    scr.async = true;
+    if (scr.textContent) {
+        scr.textContent = snippet;
+    } else {
+        scr.text = snippet;
+    }
+    document.getElementsByTagName('head')[0].appendChild(scr);
+})();

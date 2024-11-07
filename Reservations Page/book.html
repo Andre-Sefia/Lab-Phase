@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+
+
+
+    <div class="backGround">
+        <head>
+            <nav class="navBar">
+                <div class="logo">
+                    <a href="../index.html">andre's comfort</a>
+                </div>
+                <div class="menu">
+                    <a href="../index.html">Home</a>
+                    <a href="../Reservations Page/book.html">Reservations</a>
+                    <a href="../Kitchen Page/kitchen.html">Kitchen & Bar</a>
+                    <a href="">Locations</a>
+                </div>
+            </nav>
+        </head>
+
+
+
+        <!-- HERO PAGE -->
+        <main>
+            <div class="hero">
+
+                <div class="content">
+                    <div class="heading">
+                        <h1>BOOKINGS</h1>
+                    </div>
+                    <div class="homeNote">
+                        <p>EXPLORE OUR ROOMS</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <!-- AVAILABILITY -->
+    <section>
+        <div class="availabilityContainer">
+
+
+            <div class="availability">
+                <div class="date">
+                    <label for="date"></label>
+                    <input type="date" name="date" id="date" placeholder="Arrival:">
+                    <label for="date"></label>
+                    <input type="date" name="date" id="date" placeholder="Depature:"> 
+                </div>
+
+                <div class="age">
+                    <div class="adult-kids">
+                        <p>Adults:</p>
+                        <button id="minus">-</button>
+                        <p id="adult"></p>
+                        <button id="plus">+</button>
+                    </div>
+                    <div class="adult-kids">
+                        <p>Kids:</p>
+                        <button id="minus2">-</button>
+                        <p id="kids"></p>
+                        <button id="plus2">+</button>
+                    </div>
+                </div>
+                
+                <div class="btn">
+                    <button id="available">Check Availability</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- ROOMS -->
+    <section class="rooms" id="rooms">
+        <p id="availableInfo"></p>
+        <div class="roomsContainer">
+            <div class="roomsRows">
+                <div class="roomsDescription">
+                    <div class="roomsImage">
+                        <img src="../images/Presidential Suite.jpg" alt="">
+                    </div>
+
+                    <div class="imageText">
+                        <div class="textNote">
+                            <h3>Presidential Suite</h3>
+                            <p>Unwind in our cozy  Presidential Suite, perfectly designed for a comfortable stay</p>
+                        </div>
+                        <div class="textIcons">
+                            <i class="fa-solid fa-square-parking"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <i class="fa-solid fa-utensils"></i>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <i class="fa-solid fa-tv"></i>
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </div>
+                        </div>
+
+                </div>
+
+                <div class="Prices">
+                    <div class="roomsPrice" id="roomPrice1">
+                        <p class="price">$150</p>
+                        <p class="priceText">per Night</p>
+                        <button id="btn1">Book Now</button>
+                    </div>
+                    <div id="booked" class="booked">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <p class="bookedInfo">Booked!</p>
+                        <p class="bookedText">Your reservation has been made. Our team will contact you shortly.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="roomsRows" id="room1">
+                <div class="roomsDescription">
+                    <div class="roomsImage">
+                        <img src="../images/Executive Royal.jpg" alt="">
+                    </div>
+
+                    <div class="imageText">
+                        <div class="textNote">
+                            <h3>Executive Royal Suite</h3>
+                            <p>Enjoy your stay in our Suite designed with royal aesthetics</p>
+                        </div>
+                        <div class="textIcons">
+                            <i class="fa-solid fa-square-parking"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <i class="fa-solid fa-utensils"></i>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <i class="fa-solid fa-tv"></i>
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="Prices">
+                    <div class="roomsPrice" id="roomPrice2">
+                        <p class="price">$175</p>
+                        <p class="priceText">per Night</p>
+                        <button id="btn2">Book Now</button>
+                    </div>
+                    <div id="booked2" class="booked">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <p class="bookedInfo">Booked!</p>
+                        <p class="bookedText">Your reservation has been made. Our team will contact you shortly.</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="roomsRows" id="room2">
+                <div class="roomsDescription">
+                    <div class="roomsImage">
+                        <img src="../images/Executive Room.avif" alt="">
+                    </div>
+
+                    <div class="imageText">
+                        <div class="textNote">
+                            <h3>Executive Room</h3>
+                            <p>Experience luxury at our Executive Room where style meets comfort</p>
+                        </div>
+                        <div class="textIcons">
+                            <i class="fa-solid fa-square-parking"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <i class="fa-solid fa-utensils"></i>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <i class="fa-solid fa-tv"></i>
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="Prices">
+                    <div class="roomsPrice" id="roomPrice3">
+                        <p class="price">$115</p>
+                        <p class="priceText">per Night</p>
+                        <button id="btn3">Book Now</button>
+                    </div>
+                    <div id="booked3" class="booked">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <p class="bookedInfo">Booked!</p>
+                        <p class="bookedText">Your reservation has been made. Our team will contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="roomsRows">
+                <div class="roomsDescription">
+                    <div class="roomsImage">
+                        <img src="../images/Standard Room.avif" alt="">
+                    </div>
+
+                    <div class="imageText">
+                        <div class="textNote">
+                            <h3>Standard Room</h3>
+                            <p>Unparalleled luxury and class at the Andre's Comfort Hotel.</p>
+                        </div>
+                        <div class="textIcons">
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <i class="fa-solid fa-tv"></i>
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="Prices">
+                    <div class="roomsPrice" id="roomPrice4">
+                        <p class="price">$95.99</p>
+                        <p class="priceText">per Night</p>
+                        <button id="btn4">Book Now</button>
+                    </div>
+                    <div id="booked4" class="booked">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <p class="bookedInfo">Booked!</p>
+                        <p class="bookedText">Your reservation has been made. Our team will contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="roomsRows" id="room3">
+                <div class="roomsDescription">
+                    <div class="roomsImage">
+                        <img src="images/frames-for-your-heart-cpD5BMEmgLk-unsplash.jpg" alt="">
+                    </div>
+
+                    <div class="imageText">
+                        <div class="textNote">
+                            <h3>Double Deluxe Room</h3>
+                            <p>Enjoy a luxurious stay in our family comfort home away from home to accomodate the whole family</p>
+                        </div>
+                        <div class="textIcons">
+                            <i class="fa-solid fa-square-parking"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <i class="fa-solid fa-tv"></i>
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </div>
+                        </div>
+                </div>
+
+                <div class="Prices">
+                    <div class="roomsPrice" id="roomPrice5">
+                        <p class="price">$100</p>
+                        <p class="priceText">per Night</p>
+                        <button id="btn5">Book Now</button>
+                    </div>
+                    <div id="booked5" class="booked">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <p class="bookedInfo">Booked!</p>
+                        <p class="bookedText">Your reservation has been made. Our team will contact you shortly.</p>
+                    </div>
+                </div>
+            </div>
+          
+
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <hr>
+    <footer>
+        <div class="footer">
+
+            <div class="footerText">
+                <p>&copy; 2024. Andre's Comfort Int. All rights reserved. Developed by <a href="">Andre Finix</a>   Privacy Policy</p>
+            </div>
+
+            <div class="footerIcons">
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+<script src="book.js"></script>
+</body>
+</html>

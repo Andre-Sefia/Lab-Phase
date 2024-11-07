@@ -1,0 +1,62 @@
+(function(){var activeGroupsAreLoaded=false;window.__uspapi=function(command,version,callback){function getCookie(name){var cookieName=name+"=";var theCookies="; "+document.cookie;var cookieArray=theCookies.split(';');for(var i=0;i<cookieArray.length;i++){var cookie=cookieArray[i];while(cookie.charAt(0)===' '){cookie=cookie.substring(1,cookie.length);if(cookie.indexOf(cookieName)===0){return cookie.substring(cookieName.length,cookie.length);}}}
+return null;}
+var privacyCookieVal=getCookie('usprivacy');var privacyObject={"version":version,"uspString":privacyCookieVal};var validPrivacyString=false;if(privacyCookieVal!==null){validPrivacyString=true;}
+function getUSPData(){callback(privacyObject,validPrivacyString);}
+if(command.toLowerCase()==='getuspdata'){getUSPData();}};function addUspapiFrame(){if(!window.frames['__uspapiLocator']){if(document.body){var body=document.body,iframe=document.createElement('iframe');iframe.style.display='none';iframe.setAttribute('style','display:none;height:0;opacity:0;visibility:hidden;border:0;width:0;height:0;');iframe.name='__uspapiLocator';body.appendChild(iframe);}else{setTimeout(addUspapiFrame,5);}}}
+addUspapiFrame();function optOutMsgHandler(event){var msgIsString=typeof event.data==="string";var json;if(msgIsString){json=event.data.indexOf("__uspapiCall")!==-1?JSON.parse(event.data):{};}else{json=event.data;}
+if(json.__uspapiCall){var i=json.__uspapiCall;window.__uspapi(i.command,i.version,function(retValue,success){var returnMsg={"__uspapiReturn":{"returnValue":retValue,"success":success,"callId":i.callId}};window.parent.console.log('received a request for uspapi');event.source.postMessage(msgIsString?JSON.stringify(returnMsg):returnMsg,'*');});}}
+if(window.addEventListener){window.addEventListener('message',optOutMsgHandler,false);}else{window.attachEvent('onmessage',optOutMsgHandler);}
+window.usPrivacyCookie=(function(){var privacyCookieSettings={cookie:{name:'usprivacy',durationDays:365},};function createCookie(name,value,days,expiryDate){var expireString='; ',samesiteString='SameSite=Lax; ',secureString='',pathString='path=/; ',nameString=name+'='+(value||'')+'; ';var alertBoxClsdVal=getCookie('OptanonAlertBoxClosed');if(alertBoxClsdVal){expiryDate=new Date(alertBoxClsdVal);}
+if(days){var date=expiryDate?expiryDate:new Date();date.setTime(date.getTime()+(days*24*60*60*1000));expireString='expires='+date.toUTCString()+'; ';}
+var cookieString=nameString+expireString+samesiteString+secureString;cookieString+=pathString;document.cookie=cookieString;}
+function getCookie(name){var cookieName=name+"=";var theCookies="; "+document.cookie;var cookieArray=theCookies.split(';');for(var i=0;i<cookieArray.length;i++){var cookie=cookieArray[i];while(cookie.charAt(0)===' '){cookie=cookie.substring(1,cookie.length);if(cookie.indexOf(cookieName)===0){return cookie.substring(cookieName.length,cookie.length);}}}
+return null;}
+function eraseCookie(name){document.cookie=name+'=; Max-Age=-99999999;';}
+function simpleSanitize(string){var map={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;',"/":'&#x2F;',};var reg=/[&<>"'/]/ig;return string.replace(reg,function(match){map[match];});}
+function getPrivacyCookie(){return getCookie(privacyCookieSettings.cookie.name);}
+function createPrivacyCookie(val,expiryDate){var cookieName=privacyCookieSettings.cookie.name,cookieDays=privacyCookieSettings.cookie.durationDays;createCookie(cookieName,val,cookieDays,expiryDate);}
+function getVersionVal(){var privacyStringValues=getPrivacyCookie();if(privacyStringValues!==null){return privacyStringValues.substr(0,1);}else{return null;}}
+function getNoticeVal(){var privacyStringValues=getPrivacyCookie();if(privacyStringValues!==null){return privacyStringValues.substr(1,1);}else{return null;}}
+function getOptOutVal(){var privacyStringValues=getPrivacyCookie();if(privacyStringValues!==null){return privacyStringValues.substr(2,1);}else{return null;}}
+function getLSPAVal(){var privacyStringValues=getPrivacyCookie();if(privacyStringValues!==null){return privacyStringValues.substr(3,1);}else{return null;}}
+function setVersionVal(newVal){if(getPrivacyCookie()!==null){var consentStringValues=newVal;consentStringValues+=getNoticeVal();consentStringValues+=getOptOutVal();createPrivacyCookie(consentStringValues);return true;}else{return false;}}
+function setNoticeVal(newVal){if(getPrivacyCookie()!==null){var consentStringValues=getVersionVal();consentStringValues+=newVal;consentStringValues+=getOptOutVal();createPrivacyCookie(consentStringValues);return true;}else{return false;}}
+function setConsentVal(newVal){if(getPrivacyCookie()!==null){var consentStringValues=getVersionVal();consentStringValues+=getNoticeVal();consentStringValues+=newVal;createPrivacyCookie(consentStringValues);return true;}else{return false;}}
+function setLSPAVal(newVal){if(getPrivacyCookie()!==null){var consentStringValues=getVersionVal();consentStringValues+=getNoticeVal();consentStringValues+=getOptOutVal();consentStringValues+=newVal;createPrivacyCookie(consentStringValues);return true;}else{return false;}}
+return{get:getPrivacyCookie,create:createPrivacyCookie,getVersionVal:getVersionVal,getNoticeVal:getNoticeVal,getOptOutVal:getOptOutVal,getLSPAVal:getLSPAVal,setVersionVal:setVersionVal,setNoticeVal:setNoticeVal,setConsentVal:setConsentVal,setLSPAVal:setLSPAVal};})();window.gamoo=(function(){var gamooCookieSettings={cookie:{name:'OneTrustWPCCPAGoogleOptOut',durationDays:365},};function createCookie(name,value,days){var expireString='; ',samesiteString='SameSite=Lax; ',secureString='',pathString='path=/; ',nameString=name+'='+(value||'')+'; ';if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));expireString='expires='+date.toUTCString()+'; ';}
+document.cookie=nameString+expireString+pathString+samesiteString+secureString;}
+function getCookie(name){var cookieName=name+"=";var theCookies="; "+document.cookie;var cookieArray=theCookies.split(';');for(var i=0;i<cookieArray.length;i++){var cookie=cookieArray[i];while(cookie.charAt(0)===' '){cookie=cookie.substring(1,cookie.length);if(cookie.indexOf(cookieName)===0){return cookie.substring(cookieName.length,cookie.length);}}}
+return null;}
+function eraseCookie(name){document.cookie=name+'=; Max-Age=-99999999;';}
+function simpleSanitize(string){var map={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;',"/":'&#x2F;',};var reg=/[&<>"'/]/ig;return string.replace(reg,function(match){map[match];});}
+function getGamooCookie(){return getCookie(gamooCookieSettings.cookie.name);}
+function createGamooCookie(val){var cookieName=gamooCookieSettings.cookie.name,cookieDays=gamooCookieSettings.cookie.durationDays;createCookie(cookieName,val,cookieDays);}
+function disableGam(){if(typeof googletag!=="undefined"&&googletag.apiReady){googletag.pubads().disableInitialLoad();googletag.pubads().setPrivacySettings({'restrictDataProcessing':true});(adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;}else{}}
+function determineGamooStatus(){if(getGamooCookie()==='true'){disableGam();}else{enableGam();}}
+function enableGam(){if(typeof googletag!=="undefined"&&googletag.apiReady){googletag.pubads().disableInitialLoad();googletag.pubads().setPrivacySettings({'restrictDataProcessing':false});(adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=0;}else{}}
+return{getCookie:getGamooCookie,createCookie:createGamooCookie,determine:determineGamooStatus,enable:enableGam,disable:disableGam};})();window.otCcpaOptOut=(function(){var retryCount=0;function init(){var userSettings=getCCPAOptOutIds();createBannerConnection();function OptOutPrivacyObject(){var privacyStringValues={version:'1',notice:'N',optout:'N',lspa:'N'};if(isExplicitNoticeProvided()){privacyStringValues.notice='Y';}
+if(isLspaAccepted()){privacyStringValues.lspa='Y';}
+function returnValue(){return privacyStringValues.version+privacyStringValues.notice+privacyStringValues.optout+privacyStringValues.lspa;}
+function setValue(name,value){privacyStringValues[name]=value;}
+return{set:setValue,value:returnValue};}
+function checkIfActiveGroupsExist(){if(window.OneTrust&&OnetrustActiveGroups&&(activeGroupsAreLoaded||OnetrustActiveGroups!==',,'||retryCount>10)){retryCount=0;groupsUpdated();}else{retryCount++;var checkOtApi=setInterval(function(){clearInterval(checkOtApi);checkIfActiveGroupsExist();},50);}}
+if(isLocationApplicable()){function groupsUpdated(){const consent=window.OTExternalConsent;if(consent&&consent.USPrivacy&&consent.consentedDate){usPrivacyCookie.create(consent.USPrivacy,new Date(consent.consentedDate));}else{var initialPrivacyValues=new OptOutPrivacyObject();if(isExplicitNoticeProvided()){initialPrivacyValues.set('notice','Y');}else{initialPrivacyValues.set('notice','N');}
+var isCCPAOptOutIdInActive=false;var activeGroupsArr=!OnetrustActiveGroups.slice(1,-1)?[]:OnetrustActiveGroups.slice(1,-1).split(",");for(var i=0,l=userSettings.ids.length;i<l;i++){if(activeGroupsArr.indexOf(userSettings.ids[i])==-1){isCCPAOptOutIdInActive=true;break;}}
+if(isCCPAOptOutIdInActive){initialPrivacyValues.set('optout','Y');}else{initialPrivacyValues.set('optout','N');}
+usPrivacyCookie.create(initialPrivacyValues.value());}};checkIfActiveGroupsExist();gamoo.determine();}else{usPrivacyCookie.create('1---');gamoo.determine();return false;}
+function getCCPAOptOutIds(){var optOutIds=[];var geoValue="";var userSettings={};var lspaValue="";var scripts=document.getElementsByTagName('script');for(var i=0,l=scripts.length;i<l;i++){var scriptHasCCPAOptOutIds=!!scripts[i].attributes.getNamedItem("ccpa-opt-out-ids");if(scriptHasCCPAOptOutIds){var ccpaOptOutValue=scripts[i].attributes.getNamedItem("ccpa-opt-out-ids").value;geoValue=scripts[i].attributes.getNamedItem("ccpa-opt-out-geo").value;lspaValue=scripts[i].attributes.getNamedItem("ccpa-opt-out-lspa").value;if(!!ccpaOptOutValue){optOutIds=ccpaOptOutValue.split(",");}
+break;}}
+userSettings={ids:optOutIds,geo:geoValue,lspa:lspaValue};return userSettings;}
+function createBannerConnection(){window.addEventListener('consent.onetrust',function(){confirmSettings();},false);function confirmSettings(){var activeGroupsArr=!OnetrustActiveGroups.slice(1,-1)?[]:OnetrustActiveGroups.slice(1,-1).split(",");if(!userSettings.ids.length){return;}
+var isCCPAOptOutIdInActive=false
+for(var i=0,l=userSettings.ids.length;i<l;i++){if(activeGroupsArr.indexOf(userSettings.ids[i])==-1){isCCPAOptOutIdInActive=true;break;};}
+if(isCCPAOptOutIdInActive){if(isLocationApplicable()){var updatedPrivacyValues=new OptOutPrivacyObject();updatedPrivacyValues.set('optout','Y');usPrivacyCookie.create(updatedPrivacyValues.value());}
+gamoo.createCookie('true');gamoo.determine();}else{if(isLocationApplicable()){var updatedPrivacyValues=new OptOutPrivacyObject();updatedPrivacyValues.set('optout','N');usPrivacyCookie.create(updatedPrivacyValues.value());}
+gamoo.createCookie('false');gamoo.determine();}}}
+function isExplicitNoticeProvided(){return true;}
+function isLspaAccepted(){if(userSettings.lspa==="true"){return userSettings.lspa;}else{return false;}}
+function isLocationApplicable(){var locationData=window.__otccpaooLocation,locationSetting=userSettings.geo.toLowerCase();var applicable=false;if(locationSetting==='all'){applicable=true;}else if(locationSetting==='us'){applicable=(locationData.country.toString().toLowerCase()==='us');}else if(locationSetting==='ca'){applicable=(locationData.state.toString().toLowerCase()==='ca');}else{applicable=false;}
+return applicable;}}
+return{init:init}})();(function otLocation(){window.dnsfeed=function(data){window.__otccpaooLocation=data;kickStart();};function addGeoScript(){var geoScript=document.createElement('script');geoScript.src='https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location/dnsfeed';geoScript.async=true;geoScript.type="text/javascript";var script1=document.getElementsByTagName('script')[0];script1.parentNode.insertBefore(geoScript,script1);}
+function kickStart(){if(window.__otccpaooLocation!==undefined){otCcpaOptOut.init();}else{var startOptOut=setInterval(function(){if(window.__otccpaooLocation!==undefined){otCcpaOptOut.init();clearInterval(startOptOut);}else{}},500);var optOutExpiration=setTimeout(function(){clearInterval(startOptOut);},5*1000);}}
+addGeoScript();})();window.addEventListener('OneTrustGroupsUpdated',function(){activeGroupsAreLoaded=true;});})();

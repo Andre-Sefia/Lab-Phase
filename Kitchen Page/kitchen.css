@@ -132,6 +132,9 @@ body{
 
 
 
+
+
+
 /**MEDIA QUERY ----------------*/
 
 @media all and (max-width: 450px) {
@@ -187,7 +190,7 @@ body{
 .info{
     font-size: 14px;
     line-height: 50px;
-    text-align: center;sd
+    text-align: center;
 }
 
 .info span{

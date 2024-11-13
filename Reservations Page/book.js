@@ -45,6 +45,14 @@ let booked5 = document.getElementById('booked5')
 
 
 
+/* MOBILE NAVIGATION */
+let burgerNav = document.getElementById('burgerNav')
+let mobileMenu = document.getElementById('mediaMenu')
+let closeTab = document.getElementById('closeMenu')
+
+
+
+
 //FUNCTIONS
 //Adult
 minus.onclick = function(){
@@ -81,7 +89,7 @@ available.onclick = function(){
     rooms2.className = 'unavailable'
     rooms3.className = 'unavailable'
     availableInfo.innerHTML = 'Our Available Rooms'
-    rooms.style.height = '100vh'
+    rooms.style.height = '200vh'
 }
 
 
@@ -105,4 +113,19 @@ btn4.onclick = function(){
 btn5.onclick = function(){
     booked5.style.display = "flex"
     roomPrice5.style.display = 'none'
+}
+
+
+
+// MOBILE NAVIGATION
+burgerNav.onclick = function(){
+    if(mobileMenu.style.display = 'none'){
+        mobileMenu.style.display = 'flex'
+    }
+}
+
+closeTab.onclick = function(){
+    if(mobileMenu.style.display = 'flex'){
+        mobileMenu.style.display = 'none'
+    }
 }

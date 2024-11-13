@@ -8,6 +8,20 @@ let smallRooms1 = document.querySelector('#smallRooms1')
 let smallRooms2 = document.querySelector('#smallRooms2')
 
 
+/* MOBILE NAVIGATION */
+let burgerNav = document.getElementById('burgerNav')
+let mobileMenu = document.getElementById('mediaMenu')
+let closeTab = document.getElementById('closeMenu')
+
+
+
+
+
+
+
+
+
+
 /* FUNCTIONS */
 //Buttons!!
 //Youtube
@@ -71,5 +85,19 @@ smallRooms1.onmouseout = function(){
 smallRooms2.onmouseout = function(){
     if(smallRooms2.className == 'availableRooms2'){
         smallRooms2.className = 'smallRooms'
+    }
+}
+
+
+/* MOBILE NAVIGATION */
+burgerNav.onclick = function(){
+    if(mobileMenu.style.display = 'none'){
+        mobileMenu.style.display = 'flex'
+    }
+}
+
+closeTab.onclick = function(){
+    if(mobileMenu.style.display = 'flex'){
+        mobileMenu.style.display = 'none'
     }
 }
